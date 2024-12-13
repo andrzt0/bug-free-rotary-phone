@@ -1,4 +1,50 @@
 
+[loot]
+	#Set to false to disable spawning Iron Weapons in Village Weaponsmith chests via loot table injection
+	add_iron_weapons_to_village_blacksmith = true
+	#Set to false to disable spawning Longbow and Heavy Crossbow-related loot in Village Fletcher chests via loot table injection
+	add_bow_and_crossbow_loot_to_village_fletcher = true
+	#Set to false to disable spawning Diamond Weapons in End City chests via loot table injection
+	add_diamond_weapons_to_end_city = true
+	#Chance for Zombies to spawn with Iron Melee Weapons on all difficulties apart from Hard and Hardcore
+	#Range: 0.0 ~ 1.0
+	zombie_with_melee_spawn_chance_normal = 0.05000000074505806
+	#Chance for Zombies to spawn with Iron Melee Weapons on Hard or Hardcore difficulty
+	#Range: 0.0 ~ 1.0
+	zombie_with_melee_spawn_chance_hard = 0.25
+	#Set to true to disable spawning a Zombie with any weapons from this mod
+	disable_spawning_zombie_with_weapon = false
+	#Chance for Skeletons to spawn with various Longbows on all difficulties apart from Hard and Hardcore
+	#Range: 0.0 ~ 1.0
+	skeleton_with_longbow_spawn_chance_normal = 0.05000000074505806
+	#Chance for Skeletons to spawn with various Longbows on Hard or Hardcore difficulty
+	#Range: 0.0 ~ 1.0
+	skeleton_with_longbow_spawn_chance_hard = 0.25
+	#Set to true to disable spawning a Skeleton with any Longbow from this mod
+	disable_spawning_skeleton_with_longbow = false
+	#Set to true to disable the new mob heads from being dropped from mobs using the Decapitate Weapon Trait from this mod.
+	disable_new_head_drops = false
+
+[lead]
+	#Base Damage for lead weapons
+	#Range: 0.1 ~ 100.0
+	base_damage = 2.0
+	#Durability for lead weapons
+	#Range: 1 ~ 100000
+	durability = 240
+	#Set to true to disable lead weapons
+	disable = false
+
+[aluminum]
+	#Base Damage for aluminum weapons
+	#Range: 0.1 ~ 100.0
+	base_damage = 2.125
+	#Durability for aluminum weapons
+	#Range: 1 ~ 100000
+	durability = 400
+	#Set to true to disable aluminum weapons
+	disable = false
+
 [dagger]
 	#Disables all recipes for all Daggers.
 	disable = false
@@ -391,16 +437,6 @@
 	#Set to true to disable electrum weapons
 	disable = false
 
-[lead]
-	#Base Damage for lead weapons
-	#Range: 0.1 ~ 100.0
-	base_damage = 2.0
-	#Durability for lead weapons
-	#Range: 1 ~ 100000
-	durability = 240
-	#Set to true to disable lead weapons
-	disable = false
-
 [nickel]
 	#Base Damage for nickel weapons
 	#Range: 0.1 ~ 100.0
@@ -439,16 +475,6 @@
 	#Range: 1 ~ 100000
 	durability = 1024
 	#Set to true to disable platinum weapons
-	disable = false
-
-[aluminum]
-	#Base Damage for aluminum weapons
-	#Range: 0.1 ~ 100.0
-	base_damage = 2.125
-	#Durability for aluminum weapons
-	#Range: 1 ~ 100000
-	durability = 400
-	#Set to true to disable aluminum weapons
 	disable = false
 
 [explosives]
@@ -569,32 +595,6 @@
 		#Range: 0.1 ~ 100.0
 		range_multiplier = 1.0
 
-[loot]
-	#Set to false to disable spawning Iron Weapons in Village Weaponsmith chests via loot table injection
-	add_iron_weapons_to_village_blacksmith = true
-	#Set to false to disable spawning Longbow and Heavy Crossbow-related loot in Village Fletcher chests via loot table injection
-	add_bow_and_crossbow_loot_to_village_fletcher = true
-	#Set to false to disable spawning Diamond Weapons in End City chests via loot table injection
-	add_diamond_weapons_to_end_city = true
-	#Chance for Zombies to spawn with Iron Melee Weapons on all difficulties apart from Hard and Hardcore
-	#Range: 0.0 ~ 1.0
-	zombie_with_melee_spawn_chance_normal = 0.05000000074505806
-	#Chance for Zombies to spawn with Iron Melee Weapons on Hard or Hardcore difficulty
-	#Range: 0.0 ~ 1.0
-	zombie_with_melee_spawn_chance_hard = 0.25
-	#Set to true to disable spawning a Zombie with any weapons from this mod
-	disable_spawning_zombie_with_weapon = false
-	#Chance for Skeletons to spawn with various Longbows on all difficulties apart from Hard and Hardcore
-	#Range: 0.0 ~ 1.0
-	skeleton_with_longbow_spawn_chance_normal = 0.05000000074505806
-	#Chance for Skeletons to spawn with various Longbows on Hard or Hardcore difficulty
-	#Range: 0.0 ~ 1.0
-	skeleton_with_longbow_spawn_chance_hard = 0.25
-	#Set to true to disable spawning a Skeleton with any Longbow from this mod
-	disable_spawning_skeleton_with_longbow = false
-	#Set to true to disable the new mob heads from being dropped from mobs using the Decapitate Weapon Trait from this mod.
-	disable_new_head_drops = false
-
 [trading]
 	#Set to true to disable Villagers (Weaponsmiths and Fletchers) from trading weapons from this mod
 	disable = false
@@ -621,7 +621,7 @@
 		check_armor_value = false
 		#Max armor value allowed for any damage bonus that checks for armor to apply, without any armor equipped
 		#Range: 1.0 ~ 50.0
-		max_armor_value = 1.0
+		max_armor_value = 0.0
 		#Changes the "Undead Damage Bonus" Weapon Trait multiplier value
 		#Range: 1.0 ~ 50.0
 		undead_multiplier = 1.5
