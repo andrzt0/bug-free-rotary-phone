@@ -1,14 +1,71 @@
 oil = {}
+battleaxe = {}
 
-[aluminum]
-	#Base Damage for aluminum weapons
-	#Range: 0.1 ~ 100.0
-	base_damage = 2.125
-	#Durability for aluminum weapons
-	#Range: 1 ~ 100000
-	durability = 400
-	#Set to true to disable aluminum weapons
-	disable = false
+[traits]
+
+	[traits.damage_bonus]
+		#Changes the "Chest Damage Bonus" Weapon Trait multiplier value
+		#Range: 1.0 ~ 50.0
+		chest_multiplier = 2.0
+		#Changes the "Riding Damage Bonus" Weapon Trait multiplier value
+		#Range: 1.0 ~ 50.0
+		riding_multiplier = 2.0
+		#Changes the "Throwing Damage Bonus" Weapon Trait multiplier value
+		#Range: 1.0 ~ 50.0
+		throw_multiplier = 2.0
+		#Changes the "Chest Damage Bonus" Weapon Trait multiplier value
+		#Range: 1.0 ~ 50.0
+		throw_javelin_multiplier = 3.0
+		#Changes the "Unarmored Damage Bonus" Weapon Trait multiplier value
+		#Range: 1.0 ~ 50.0
+		unarmored_multiplier = 3.0
+		#If set to true, any damage bonus that checks for armor will only apply if the hit mob has less than the total armor value threshold, while still checking for armor
+		check_armor_value = false
+		#Max armor value allowed for any damage bonus that checks for armor to apply, without any armor equipped
+		#Range: 1.0 ~ 50.0
+		max_armor_value = 0.0
+		#Changes the "Undead Damage Bonus" Weapon Trait multiplier value
+		#Range: 1.0 ~ 50.0
+		undead_multiplier = 1.5
+		#Changes the "Backstab Damage Bonus" Weapon Trait multiplier value
+		#Range: 1.0 ~ 50.0
+		backstab_multiplier = 3.0
+
+	[traits.damage_absorption]
+		#Changes the percentage of damage absorbed by the "Damage Absorption" Weapon Trait
+		#Range: 0.0 ~ 1.0
+		damage_absorption_factor = 0.25
+
+	[traits.reach]
+		#Changes the reach of any weapons with the "Reach I" Weapon Trait
+		#Range: 5.0 ~ 15.0
+		reach1_value = 6.0
+		#Changes the reach of any weapons with the "Reach II" Weapon Trait
+		#Range: 5.0 ~ 15.0
+		reach2_value = 7.0
+
+	[traits.sweep]
+		#Changes the factor of damage inflicted to enemies when sweep attacked on weapons with the "Sweep II" Weapon Trait
+		#Range: 0.0 ~ 1.0
+		sweep2_percentage = 0.5
+		#Changes the factor of damage inflicted to enemies when sweep attacked on weapons with the "Sweep III" Weapon Trait
+		#Range: 0.0 ~ 1.0
+		sweep3_percentage = 1.0
+
+	[traits.armor_pierce]
+		#Changes the percentage of damage that ignores armor on weapons with the "Armor Piercing" Weapon Trait
+		#Range: 0.0 ~ 100.0
+		percentage = 50.0
+
+	[traits.quick_strike]
+		#Tweaks the hurt resistance ticks for weapons that use the "Quick Strike" Weapon Trait
+		#Range: 10 ~ 20
+		hurt_resistance_ticks = 14
+
+	[traits.decapitate]
+		#Tweaks the percentage of Skull drops from weapons with the "Decapitate" Weapon Trait
+		#Range: 0.0 ~ 100.0
+		skull_drop_percentage = 25.0
 
 [dagger]
 	#Disables all recipes for all Daggers.
@@ -277,6 +334,8 @@ oil = {}
 	#Range: 1 ~ 1000
 	charge_ticks = 5
 
+5
+
 [battleaxe]
 	#Disables all recipes for all Battleaxes.
 	disable = false
@@ -290,83 +349,3 @@ oil = {}
 	#Range: 0.1 ~ 10.0
 	damage_multiplier = 2.0
 
-[flanged_mace]
-	#Disables all recipes for all Flanged Maces.
-	disable = false
-	#Attack speed of Flanged Maces.
-	#Range: 0.0 ~ 4.0
-	speed = 1.2000000476837158
-	#Base Damage of Flanged Maces.
-	#Range: 0.1 ~ 100.0
-	base_damage = 3.0
-	#Damage Multiplier for Flanged Maces.
-	#Range: 0.1 ~ 10.0
-	damage_multiplier = 1.5
-
-[glaive]
-	#Disables all recipes for all Glaives.
-	disable = false
-	#Attack speed of Glaives.
-	#Range: 0.0 ~ 4.0
-	speed = 1.0
-	#Base Damage of Glaives.
-	#Range: 0.1 ~ 100.0
-	base_damage = 4.0
-	#Damage Multiplier for Glaives.
-	#Range: 0.1 ~ 10.0
-	damage_multiplier = 1.5
-
-[quarterstaff]
-	#Disables all recipes for all Quarterstaves.
-	disable = false
-	#Attack speed of Quarterstaves.
-	#Range: 0.0 ~ 4.0
-	speed = 1.399999976158142
-	#Base Damage of Quarterstaves.
-	#Range: 0.1 ~ 100.0
-	base_damage = 3.0
-	#Damage Multiplier for Quarterstaves.
-	#Range: 0.1 ~ 10.0
-	damage_multiplier = 1.5
-
-[scythes]
-	#Disables all recipes for all Scythes.
-	disable = false
-	#Attack speed of Scythes.
-	#Range: 0.0 ~ 4.0
-	speed = 1.0
-	#Base Damage of Scythes.
-	#Range: 0.1 ~ 100.0
-	base_damage = 5.0
-	#Damage Multiplier for Scythes.
-	#Range: 0.1 ~ 10.0
-	damage_multiplier = 1.0
-
-[copper]
-	#Base Damage for copper weapons
-	#Range: 0.1 ~ 100.0
-	base_damage = 1.5
-	#Durability for copper weapons
-	#Range: 1 ~ 100000
-	durability = 200
-	#Set to true to disable copper weapons
-	disable = false
-
-[tin]
-	#Base Damage for tin weapons
-	#Range: 0.1 ~ 100.0
-	base_damage = 1.75
-	#Durability for tin weapons
-	#Range: 1 ~ 100000
-	durability = 180
-	#Set to true to disable tin weapons
-	disable = false
-
-[bronze]
-	#Base Damage for bronze weapons
-	#Range: 0.1 ~ 100.0
-	base_damage = 2.0
-	#Durability for bronze weapons
-	#Range: 1 ~ 100000
-	durability = 320
-	#Set to true 
